@@ -1,0 +1,64 @@
+<html>
+    <head>
+    <meta charset="ISO-8859-1">
+        <title>Login page</title>
+        <script type="text/JavaScript" src="main.js"></script>
+    <script type = "text/javascript">
+        
+    function validation()
+    
+    {
+    	
+    	
+    	if(document.login.dbName.value == null)
+    		{
+    		
+    		alert("Please enter Database Name!");
+    		document.login.dbName.focus();
+    		return false;    		
+    		}
+    	
+    	if(document.login.userid.value == "")
+		{
+		
+		alert("Please enter Username!");
+		document.login.userid.focus();
+		return false;    		
+		}
+    	
+    	/*if(document.login.pswrd.value == "")
+		{
+		
+		alert("Please enter Password!");
+		document.login.pswrd.focus();
+		return false;    		
+		}*/
+    	
+    	
+    }
+    
+    
+    </script>
+    </head>
+    
+    <body  bgcolor = "#CCFFCC">
+        <h1>QBE Interface</h1>
+        <form name="login" method="post" action="get_credits.jsp" onsubmit="return validation()">
+        	<table id = "initpage">
+        	<tr>
+        	<td>DatabaseName</td><td><input type="text" id = "dbName" name="dbName"/></td></tr>
+            <tr><td>Username</td><td><input type="text" id = "userid" name="userid"/></td></tr>
+            <tr><td>Password</td><td><input type="password" id = "pass" name="pswrd"/></td></tr>
+            <tr></tr> <tr></tr><tr></tr><tr></tr>
+            <tr><td></td><td><input type="submit" value="Login"/>
+            <input type="reset" value="Reset"/></td></tr>
+            </table><br/>
+            <div id="loginResult"></div>
+        </form>
+ 
+  
+ 
+  
+        
+    </body>
+</html>

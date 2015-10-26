@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<meta charset="ISO-8859-1">
+<title>QBE Interface Home Page</title>
+<head>
+<!--<script type="text/JavaScript" src="jquery-1.11.2.min.js"></script>-->
+<script type="text/JavaScript" src="main.js"></script>
+
+<style>
+#condBox{
+    
+       position: absolute;
+    left: 120px;
+    top: 170px;
+}
+
+#Get_Results{
+ 
+        position: absolute;
+    left: 350px;
+    top: 170px;
+   }
+   
+#Collapse{
+
+position: absolute;
+    left: 85px;
+    top: 117px;
+    
+
+}
+  
+</style>
+
+
+</head>
+<body onload="javascript:Tablenames()" bgcolor = "#CCFFCC">
+<form name="Home">
+<marquee behavior="alternate">QBE Interface</marquee>
+
+<p><b>Please select a table from the drop down</b></p>
+
+<div id="Drop_Down"></div><br/>
+
+
+
+<input type="button" id="Get Tables" value="Tables" onclick = "return getTables();"/><br/>
+
+<input type="button" id="Collapse" value="Collapse" onclick = "window.location.href='Home.html'"/><br/>
+
+<br/>
+<a id="cond" style="visibility:hidden">Conditional Box:</a><input type="text" style="visibility:hidden" name="condBox" id="condBox" value="" /><br/>
+
+<input type="button" style="visibility:hidden" id="Get_Results" value="Get Results" onclick = "getResults();"/>
+
+<div id="tableResults"></div>
+<input type="hidden" id = "db"/>
+<input type="hidden" id = "id"/>
+<input type="hidden" id = "pwd"/>
+
+</form>
+</body>
+</html>
